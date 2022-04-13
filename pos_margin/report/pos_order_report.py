@@ -4,8 +4,8 @@ from odoo import fields, models
 class PosOrderReport(models.Model):
     _inherit = "report.pos.order"
 
-    margin_total = fields.Float(string="Margin Total")
-    margin_rate = fields.Float(string="Margin Rate", group_operator="avg")
+    margin_total = fields.Float()
+    margin_rate = fields.Float(group_operator="avg")
 
     def _select(self):
         return (

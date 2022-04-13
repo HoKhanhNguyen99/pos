@@ -10,7 +10,6 @@ class PosOrderLine(models.Model):
 
     # Columns Section
     margin = fields.Float(
-        "Margin",
         compute="_compute_multi_margin",
         store=True,
         digits="Product Price",
